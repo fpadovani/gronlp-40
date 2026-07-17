@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>40 Years of GroNLP — Groningen</title>
+<meta name="description" content="Celebrating 40 years of the Information Science and Computational Linguistics Group (GroNLP), University of Groningen. Wednesday 21 October 2026, House of Connections, Groningen.">
+
+<!-- Open Graph / LinkedIn share preview -->
+<meta property="og:title" content="40 Years of GroNLP">
+<meta property="og:description" content="Celebrating four decades of Information Science and Computational Linguistics in Groningen. Wed 21 Oct 2026, House of Connections.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500;1,6..72,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper: #efede6;
+    --paper-2: #e7e4da;
+    --ink: #1c1b18;
+    --red: #a6192e;
+    --teal: #1f4b43;
+    --brass: #b08d57;
+    --muted: #6b6b66;
+    --max: 920px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  body{
+    margin:0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  a{ color: inherit; }
+
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  .mono{
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.02em;
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(239,237,230,0.9);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(28,27,24,0.1);
+  }
+  nav .wrap{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .brand{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand b{ color: var(--red); }
+  .navlinks{
+    display:flex;
+    gap: 24px;
+    font-size: 14px;
+  }
+  .navlinks a{
+    text-decoration: none;
+    color: var(--muted);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: color .15s, border-color .15s;
+  }
+  .navlinks a:hover, .navlinks a:focus-visible{
+    color: var(--ink);
+    border-color: var(--brass);
+  }
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding: 88px 0 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .eyebrow{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0 0 18px;
+  }
+  .big-number{
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(96px, 22vw, 220px);
+    line-height: 0.85;
+    margin: 0;
+    color: var(--red);
+  }
+  .hero-title{
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: clamp(26px, 4.2vw, 40px);
+    line-height: 1.2;
+    max-width: 640px;
+    margin: 6px 0 28px;
+  }
+  .hero-meta{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    font-size: 15px;
+    color: var(--ink);
+    margin-bottom: 34px;
+  }
+  .hero-meta span.label{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--muted);
+    display:block;
+    letter-spacing: 0.08em;
+    margin-bottom: 3px;
+  }
+  .cta-row{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 2px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    text-decoration: none;
+    border: 1px solid var(--ink);
+    transition: background .15s, color .15s;
+  }
+  .btn.primary{
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn.primary:hover, .btn.primary:focus-visible{
+    background: var(--red);
+    border-color: var(--red);
+  }
+  .btn.ghost:hover, .btn.ghost:focus-visible{
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  /* ---------- TIMELINE (signature element) ---------- */
+  section.timeline{
+    padding: 20px 0 80px;
+  }
+  .timeline-caption{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+  }
+  .tl-svg{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .tl-node-year{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+    font-weight: 500;
+    fill: var(--ink);
+  }
+  .tl-node-label{
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    fill: var(--muted);
+  }
+  .tl-arc{
+    fill: none;
+    stroke: var(--brass);
+    stroke-width: 1.4;
+  }
+  .tl-tag{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    fill: var(--teal);
+    text-transform: uppercase;
+  }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{
+    padding: 64px 0;
+    border-top: 1px solid rgba(28,27,24,0.1);
+  }
+  .section-head{
+    display:flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .section-num{
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--brass);
+    font-size: 13px;
+  }
+  h2{
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: clamp(24px, 3vw, 32px);
+    margin: 0;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .about-grid p{ margin: 0 0 16px; color: var(--ink); }
+  .about-grid .then .mono-label, .about-grid .now .mono-label{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--teal);
+    display:block;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 720px){
+    .about-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- PROGRAM ---------- */
+  .tentative-flag{
+    display:inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+  .program-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(28,27,24,0.12);
+  }
+  .program-list li{
+    display:grid;
+    grid-template-columns: 90px 1fr;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(28,27,24,0.12);
+  }
+  .program-list time{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: var(--red);
+  }
+  .program-list .item-title{
+    font-weight: 600;
+    margin: 0 0 2px;
+  }
+  .program-list .item-desc{
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0;
+  }
+
+  /* ---------- LOCATION ---------- */
+  .loc-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .loc-details .mono-label{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--teal);
+    display:block;
+    margin-bottom: 10px;
+  }
+  .loc-details address{
+    font-style: normal;
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+  .map-frame{
+    border: 1px solid rgba(28,27,24,0.15);
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+  @media (max-width: 720px){
+    .loc-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding: 48px 0 64px;
+    border-top: 1px solid rgba(28,27,24,0.1);
+  }
+  footer .wrap{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+  }
+  footer p{
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  footer a{
+    text-decoration: none;
+    border-bottom: 1px solid var(--brass);
+  }
+
+  :focus-visible{
+    outline: 2px solid var(--teal);
+    outline-offset: 2px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">GroNLP <b>· 40</b></a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#program">Program</a>
+      <a href="#location">Location</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">University of Groningen — Information Science &amp; Computational Linguistics</p>
+    <p class="big-number">40</p>
+    <h1 class="hero-title">Celebrating four decades of GroNLP — the Information Science and Computational Linguistics Group.</h1>
+
+    <div class="hero-meta">
+      <div>
+        <span class="label">Date</span>
+        Wednesday 21 October 2026
+      </div>
+      <div>
+        <span class="label">Venue</span>
+        House of Connections, Groningen
+      </div>
+      <div>
+        <span class="label">Address</span>
+        Grote Markt 21, 9712 HR Groningen
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn primary" href="#" id="addToCalendar">Add to calendar ↓</a>
+      <a class="btn ghost" href="#program">See the program</a>
+    </div>
+  </div>
+</header>
+
+<section class="timeline" aria-label="History timeline">
+  <div class="wrap">
+    <p class="timeline-caption">Forty years, three milestones</p>
+    <svg class="tl-svg" viewBox="0 0 860 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Timeline from 1986 to 2026">
+      <!-- baseline -->
+      <line x1="20" y1="120" x2="840" y2="120" stroke="#1c1b18" stroke-opacity="0.15" stroke-width="1"/>
+
+      <!-- dependency-style arc: founding -> renamed -->
+      <path class="tl-arc" d="M 60 120 Q 240 55 420 120" />
+      <text class="tl-tag" x="240" y="58" text-anchor="middle">renamed → Information Science</text>
+
+      <!-- dependency-style arc: renamed -> 40th -->
+      <path class="tl-arc" d="M 420 120 Q 630 45 800 120" />
+      <text class="tl-tag" x="630" y="48" text-anchor="middle">grows into GroNLP</text>
+
+      <!-- node 1986 -->
+      <circle cx="60" cy="120" r="5" fill="#a6192e"/>
+      <text class="tl-node-year" x="60" y="146" text-anchor="middle">1986</text>
+      <text class="tl-node-label" x="60" y="163" text-anchor="middle">Alfa-Informatica founded</text>
+
+      <!-- node 2016 -->
+      <circle cx="420" cy="120" r="5" fill="#1f4b43"/>
+      <text class="tl-node-year" x="420" y="146" text-anchor="middle">2016</text>
+      <text class="tl-node-label" x="420" y="163" text-anchor="middle">30th anniversary</text>
+
+      <!-- node 2026 -->
+      <circle cx="800" cy="120" r="6" fill="#a6192e"/>
+      <text class="tl-node-year" x="800" y="146" text-anchor="middle">2026</text>
+      <text class="tl-node-label" x="800" y="163" text-anchor="middle">40 years of GroNLP</text>
+    </svg>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num mono">01</span>
+      <h2>About the anniversary</h2>
+    </div>
+    <div class="about-grid">
+      <div class="then">
+        <span class="mono-label">1986</span>
+        <p>Alfa-Informatica began as a study programme spanning Information Science, Humanities Computing, Artificial Intelligence, Information Technology, and Language Technology — an unusually broad combination for its time, and the seed of what would become computational linguistics research in Groningen.</p>
+      </div>
+      <div class="now">
+        <span class="mono-label">2026</span>
+        <p>Forty years on, that programme has grown into today's Information Science degree and the research group now known as GroNLP, working on language technology, web technology, and natural language processing more broadly. This event brings together colleagues, alumni, and friends of the group to mark that history together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="program">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num mono">02</span>
+      <h2>Program</h2>
+    </div>
+    <span class="tentative-flag">Tentative — subject to change</span>
+
+    <!--
+      EDIT ME: replace the times, titles, and descriptions below
+      with the confirmed program once it's finalized.
+      Each <li> is one program item; add or remove <li> blocks as needed.
+    -->
+    <ul class="program-list">
+      <li>
+        <time>14:00</time>
+        <div>
+          <p class="item-title">Doors open &amp; registration</p>
+          <p class="item-desc">Walk-in, coffee, and informal reunion.</p>
+        </div>
+      </li>
+      <li>
+        <time>14:30</time>
+        <div>
+          <p class="item-title">Welcome &amp; opening remarks</p>
+          <p class="item-desc">A short look back at 40 years of the programme and group.</p>
+        </div>
+      </li>
+      <li>
+        <time>14:45</time>
+        <div>
+          <p class="item-title">Keynote talk</p>
+          <p class="item-desc">Speaker and title to be announced.</p>
+        </div>
+      </li>
+      <li>
+        <time>15:30</time>
+        <div>
+          <p class="item-title">Panel: four decades of language technology in Groningen</p>
+          <p class="item-desc">Panelists to be announced.</p>
+        </div>
+      </li>
+      <li>
+        <time>16:15</time>
+        <div>
+          <p class="item-title">Coffee break</p>
+          <p class="item-desc">&nbsp;</p>
+        </div>
+      </li>
+      <li>
+        <time>16:45</time>
+        <div>
+          <p class="item-title">Lightning talks from alumni</p>
+          <p class="item-desc">Short reflections from former students and researchers.</p>
+        </div>
+      </li>
+      <li>
+        <time>17:30</time>
+        <div>
+          <p class="item-title">Closing remarks</p>
+          <p class="item-desc">&nbsp;</p>
+        </div>
+      </li>
+      <li>
+        <time>18:00</time>
+        <div>
+          <p class="item-title">Drinks &amp; reception</p>
+          <p class="item-desc">Informal celebration to close the afternoon.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="location">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num mono">03</span>
+      <h2>Location</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-details">
+        <span class="mono-label">Venue</span>
+        <address>
+          House of Connections<br>
+          Grote Markt 21<br>
+          9712 HR Groningen
+        </address>
+        <a class="btn ghost" href="https://www.google.com/maps/place/Grote+Markt+21,+9712+HR+Groningen" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+      </div>
+      <iframe class="map-frame" title="Map to House of Connections"
+        src="https://www.google.com/maps?q=Grote+Markt+21,+9712+HR+Groningen&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>GroNLP · Information Science and Computational Linguistics Group · University of Groningen</p>
+    <p><a href="mailto:REPLACE_WITH_CONTACT_EMAIL">Contact the organizers</a></p>
+  </div>
+</footer>
+
+<script>
+  // Builds a downloadable .ics file for "Add to calendar".
+  // EDIT: adjust start/end time once the program is confirmed.
+  document.getElementById('addToCalendar').addEventListener('click', function(e){
+    e.preventDefault();
+    const ics = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'BEGIN:VEVENT',
+      'DTSTART:20261021T140000',
+      'DTEND:20261021T190000',
+      'SUMMARY:40 Years of GroNLP',
+      'LOCATION:House of Connections, Grote Markt 21, 9712 HR Groningen',
+      'DESCRIPTION:Celebrating 40 years of the Information Science and Computational Linguistics Group (GroNLP), University of Groningen.',
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+    const blob = new Blob([ics], { type: 'text/calendar' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'gronlp-40-years.ics';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+</script>
+
+</body>
+</html>
