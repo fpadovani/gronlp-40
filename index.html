@@ -128,6 +128,13 @@
     max-width: 640px;
     margin: 6px 0 28px;
   }
+  .hero-subtitle{
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--muted);
+    margin: -18px 0 28px;
+  }
   .hero-meta{
     display:flex;
     flex-wrap: wrap;
@@ -299,6 +306,29 @@
     margin: 0;
   }
 
+  /* ---------- CALL FOR ABSTRACTS / REGISTRATION ---------- */
+  .info-block p{ margin: 0 0 16px; color: var(--ink); max-width: 680px; }
+  .info-block ul{ margin: 0 0 24px; padding-left: 20px; color: var(--ink); max-width: 680px; }
+  .info-block li{ margin-bottom: 8px; }
+  .deadline-flag{
+    display:inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--teal);
+    border: 1px solid var(--teal);
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+  .link-row{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 8px;
+  }
+
   /* ---------- LOCATION ---------- */
   .loc-grid{
     display:grid;
@@ -364,6 +394,8 @@
     <a class="brand" href="#top">GroNLP <b>· 40</b></a>
     <div class="navlinks">
       <a href="#about">About</a>
+      <a href="#call-for-abstracts">Call for Abstracts</a>
+      <a href="#registration">Registration</a>
       <a href="#program">Program</a>
       <a href="#location">Location</a>
     </div>
@@ -417,10 +449,64 @@
   </div>
 </section>
 
-<section id="program">
+<section id="call-for-abstracts">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num mono">02</span>
+      <h2>Call for Abstracts</h2>
+    </div>
+    <span class="deadline-flag">Deadline: REPLACE_WITH_DEADLINE_DATE</span>
+
+    <!--
+      EDIT ME: replace the placeholder text below with the real call for
+      abstracts once the details (topics, length, deadline, review process)
+      are finalized. Update the deadline flag above too.
+    -->
+    <div class="info-block">
+      <p>We invite alumni, current and former staff, and friends of GroNLP to submit an abstract for a short talk or poster at the anniversary event. We welcome contributions on language technology, computational linguistics, information science, and digital humanities — past, present, or future.</p>
+      <ul>
+        <li>Abstracts should be no longer than 300 words, plain text or PDF.</li>
+        <li>Please indicate whether you are proposing a lightning talk or a poster.</li>
+        <li>Include your name, affiliation, and years affiliated with the group (if applicable).</li>
+        <li>Submission deadline: REPLACE_WITH_DEADLINE_DATE. Notifications by REPLACE_WITH_NOTIFICATION_DATE.</li>
+      </ul>
+      <p>Submit your abstract by uploading it to the shared Drive folder below.</p>
+      <div class="link-row">
+        <a class="btn primary" href="https://drive.google.com/drive/folders/REPLACE_WITH_FOLDER_ID" target="_blank" rel="noopener">Submit via Drive folder ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="registration">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num mono">03</span>
+      <h2>Registration</h2>
+    </div>
+
+    <!--
+      EDIT ME: replace the placeholder text and form link below once
+      registration is confirmed (capacity, deadline, cost if any).
+    -->
+    <div class="info-block">
+      <p>Attendance is free, but we kindly ask everyone planning to join — alumni, colleagues, and guests — to register in advance so we can plan catering and seating.</p>
+      <ul>
+        <li>Registration deadline: REPLACE_WITH_REGISTRATION_DEADLINE.</li>
+        <li>Let us know in the form if you plan to join the drinks &amp; reception afterward.</li>
+        <li>Questions? Contact the organizers (see footer).</li>
+      </ul>
+      <div class="link-row">
+        <a class="btn primary" href="https://forms.gle/REPLACE_WITH_FORM_ID" target="_blank" rel="noopener">Go to registration form ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="program">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num mono">04</span>
       <h2>Program</h2>
     </div>
     <span class="tentative-flag">Tentative — subject to change</span>
@@ -432,59 +518,59 @@
     -->
     <ul class="program-list">
       <li>
-        <time>14:00</time>
+        <time>10:00</time>
         <div>
           <p class="item-title">Doors open &amp; registration</p>
           <p class="item-desc">Walk-in, coffee, and informal reunion.</p>
         </div>
       </li>
       <li>
-        <time>14:30</time>
+        <time>10:30</time>
         <div>
-          <p class="item-title">Welcome &amp; opening remarks</p>
-          <p class="item-desc">A short look back at 40 years of the programme and group.</p>
-        </div>
-      </li>
-      <li>
-        <time>14:45</time>
-        <div>
-          <p class="item-title">Keynote talk</p>
+          <p class="item-title">First keynote</p>
           <p class="item-desc">Speaker and title to be announced.</p>
         </div>
       </li>
       <li>
-        <time>15:30</time>
+        <time>10:45</time>
         <div>
-          <p class="item-title">Panel: four decades of language technology in Groningen</p>
-          <p class="item-desc">Panelists to be announced.</p>
+          <p class="item-title">Poster session</p>
+          <p class="item-desc">Contributed posters from alumni and current members.</p>
         </div>
       </li>
       <li>
-        <time>16:15</time>
+        <time>12:00</time>
+        <div>
+          <p class="item-title">Lunch break</p>
+          <p class="item-desc">&nbsp;</p>
+        </div>
+      </li>
+      <li>
+        <time>13:00</time>
+        <div>
+          <p class="item-title">Second keynote</p>
+          <p class="item-desc">Speaker and title to be announced.</p>
+        </div>
+      </li>
+      <li>
+        <time>14:00</time>
         <div>
           <p class="item-title">Coffee break</p>
           <p class="item-desc">&nbsp;</p>
         </div>
       </li>
       <li>
-        <time>16:45</time>
+        <time>14:15</time>
         <div>
-          <p class="item-title">Lightning talks from alumni</p>
-          <p class="item-desc">Short reflections from former students and researchers.</p>
+          <p class="item-title">Panel session</p>
+          <p class="item-desc">Panelists to be announced.</p>
         </div>
       </li>
       <li>
-        <time>17:30</time>
+        <time>15:00</time>
         <div>
-          <p class="item-title">Closing remarks</p>
-          <p class="item-desc">&nbsp;</p>
-        </div>
-      </li>
-      <li>
-        <time>18:00</time>
-        <div>
-          <p class="item-title">Drinks &amp; reception</p>
-          <p class="item-desc">40 years GroNLP - In honor of the retirements of GJ van Noord</p>
+          <p class="item-title">Extra activity</p>
+          <p class="item-desc">Details to be announced.</p>
         </div>
       </li>
     </ul>
@@ -494,7 +580,7 @@
 <section id="location">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-num mono">03</span>
+      <span class="section-num mono">05</span>
       <h2>Location</h2>
     </div>
     <div class="loc-grid">
