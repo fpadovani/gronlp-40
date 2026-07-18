@@ -73,11 +73,19 @@
     padding-bottom: 16px;
   }
   .brand{
+    display:inline-flex;
+    align-items:center;
+    gap: 8px;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
     color: var(--ink);
+  }
+  .brand-mascot{
+    height: 26px;
+    width: auto;
+    display: block;
   }
   .brand b{ color: var(--red); }
   .navlinks{
@@ -405,7 +413,7 @@
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="#top">GroNLP <b>· 40</b></a>
+    <a class="brand" href="#top"><img src="bertje.png" alt="" class="brand-mascot">GroNLP <b>· 40</b></a>
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#call-for-abstracts">Call for Abstracts</a>
