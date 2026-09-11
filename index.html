@@ -351,6 +351,25 @@
     margin-top: 1cm;
   }
 
+  /* ---------- KEYNOTE BIOS ---------- */
+  .keynote-bio .mono-label{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--teal);
+    display:block;
+    margin-bottom: 8px;
+  }
+  .keynote-bio h3{
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0 0 14px;
+  }
+  .keynote-bio p{ margin: 0 0 12px; }
+  .keynote-bio p:last-child{ margin-bottom: 0; }
+
   /* ---------- LOCATION ---------- */
   .loc-grid{
     display:grid;
@@ -420,6 +439,7 @@
       <a href="#registration">Registration</a>
       <a href="#meet-gertjan">Meet Gertjan</a>
       <a href="#program">Program</a>
+      <a href="#keynote-bios">Keynotes</a>
       <a href="#location">Location</a>
     </div>
   </div>
@@ -602,7 +622,7 @@
       <li>
         <time>11:05–11:50</time>
         <div>
-          <p class="item-title">Keynote 2</p>
+          <p class="item-title">Keynote 2 - Tanja Gaustad</p>
           <p class="item-desc">&nbsp;</p>
         </div>
       </li>
@@ -659,10 +679,33 @@
   </div>
 </section>
 
-<section id="location">
+<section id="keynote-bios">
   <div class="wrap">
     <div class="section-head">
       <span class="section-num mono">06</span>
+      <h2>Presentation of the Keynotes</h2>
+    </div>
+
+    <div class="info-block keynote-bio">
+      <span class="mono-label">Keynote 2</span>
+      <h3>Tanja Gaustad</h3>
+      <p>Tanja Gaustad is a senior computational linguist and data scientist at the Centre for Text Technology (CTexT) at the NWU. She holds a PhD in Computational Linguistics from the University of Groningen, the Netherlands and has worked in both academia and industry across three continents. Her experience includes research and development, supervision of postgraduate students, teaching, as well as project management and project leadership. In her research, Tanja always focusses on bringing together a computational, data-driven approach with insights from linguistics, often bridging the gap between different disciplines. She has published on a variety of topics including author attribution, data annotation and quality control, embeddings for low-resource languages, word sense disambiguation, and universal dependency annotation for Setswana.</p>
+    </div>
+
+    <div class="info-block keynote-bio">
+      <span class="mono-label">Keynote 3</span>
+      <h3>Rob van der Goot</h3>
+      <p>Rob van der Goot is interested in robustness in natural language processing. His PhD focused on syntactic parsing of social media text, and his subsequent research has explored multi‑task learning, cross‑domain generalization, and cross‑lingual transfer. His current work focuses on multilinguality, subword modeling, and linguistically motivated language models.</p>
+      <p><strong>Title:</strong> Let's agree to disagree in syntactic annotations</p>
+      <p><strong>Abstract:</strong> In this talk I will present a case-study on evaluating disagreements in syntactic annotations. We have completely independent annotations on the same text from three sources. We use these annotations for an analysis and also propose a method for evaluating parsers on distributions of structures instead of single gold annotations.</p>
+    </div>
+  </div>
+</section>
+
+<section id="location">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num mono">07</span>
       <h2>Location</h2>
     </div>
     <div class="loc-grid">
